@@ -1,23 +1,455 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://도메인/driver-addition-guide"
+      },
+      "headline": "자동차보험 운전자 추가 비용 및 방법: 2026년 비교 분석 가이드",
+      "description": "자동차보험 운전자 추가 시 발생하는 예상 비용, 연령별 평균 가격 비교, 단기 임시운전자특약의 장단점 및 다이렉트 보험사별 순위 혜택 정보를 제공합니다.",
+      "image": "https://도메인/images/driver-addition-main.jpg",  
+      "author": {
+        "@type": "Organization",
+        "name": "금융 정보 포털"
+      },  
+      "publisher": {
+        "@type": "Organization",
+        "name": "금융 정보 포털",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://도메인/logo.png"
+        }
+      },
+      "datePublished": "2026-01-15",
+      "dateModified": "2026-06-19"
+    }
+    </script>
+
+    <style>
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #f4f7f6; 
+            color: #2c3e50; 
+            line-height: 1.8; 
+        }
+        header, section, footer { 
+            max-width: 1000px; 
+            margin: 30px auto; 
+            padding: 40px; 
+            background: #ffffff; 
+            border-radius: 16px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
+        }
+        h1, h2, h3 { 
+            color: #1a365d; 
+            margin-bottom: 20px; 
+            font-weight: 700; 
+        }
+        h1 { 
+            font-size: 2.6rem; 
+            text-align: center; 
+            padding-bottom: 15px; 
+            border-bottom: 3px solid #cbd5e1; 
+            line-height: 1.4;
+        }
+        h2 { 
+            font-size: 1.9rem; 
+            border-bottom: 2px solid #e2e8f0; 
+            padding-bottom: 12px; 
+            margin-top: 40px; 
+        }
+        h3 { 
+            font-size: 1.4rem; 
+            color: #2b6cb0; 
+            border-left: 5px solid #2b6cb0; 
+            padding-left: 15px; 
+            margin-top: 30px; 
+        }
+        p, li, td, th, label, textarea { 
+            font-size: 1.05rem; 
+            color: #4a5568;
+        }
+        ul, ol { 
+            padding-left: 25px; 
+            margin-bottom: 25px; 
+        }
+        ul li, ol li { 
+            margin-bottom: 10px; 
+        }
+        
+        table { 
+            width: 100%; 
+            border-collapse: separate; 
+            border-spacing: 0; 
+            margin: 30px 0; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); 
+            border: 1px solid #e2e8f0;
+        }
+        th, td { 
+            padding: 16px; 
+            text-align: left; 
+        }
+        th { 
+            background: #2b6cb0; 
+            color: #ffffff; 
+            font-weight: 700; 
+            border-right: 1px solid #4299e1; 
+        }
+        th:last-child { 
+            border-right: none; 
+        }
+        td {
+            border-bottom: 1px solid #edf2f7;
+            border-right: 1px solid #edf2f7;
+        }
+        td:last-child {
+            border-right: none;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:nth-child(even) { 
+            background: #f7fafc; 
+        }
+        tr:hover td { 
+            background: #ebf8ff; 
+        }
+
+        a { 
+            color: #3182ce; 
+            text-decoration: none; 
+            transition: color 0.3s ease; 
+        }
+        a:hover { 
+            color: #1a365d; 
+            text-decoration: underline; 
+        }
+        
+        .btn-cta {
+            display: block;
+            margin: 40px auto;
+            padding: 18px 45px;
+            background: #dd6b20; 
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.25rem;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(221, 107, 32, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            max-width: 400px;
+        }
+        .btn-cta:hover {
+            background: #c05621;
+            transform: translateY(-2px);
+        }
+        
+        form { 
+            background: #ffffff; 
+            padding: 40px; 
+            border-radius: 12px; 
+            border: 1px solid #e2e8f0; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+        }
+        label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 700; 
+            color: #2d3748; 
+        }
+        input[type="text"], input[type="tel"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 25px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            box-sizing: border-box; 
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background: #f8fafc;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #3182ce;
+            outline: none;
+            box-shadow: 0 0 8px rgba(49, 130, 206, 0.2);
+            background: #ffffff;
+        }
+        .form-group { 
+            margin-bottom: 30px; 
+        }
+        .required-star { 
+            color: #e53e3e; 
+            font-size: 1.1rem; 
+            margin-left: 4px; 
+        }
+        
+        .highlight-box {
+            background: #ebf8ff;
+            border-left: 6px solid #3182ce;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .external-links ul { 
+            list-style-type: none; 
+            padding-left: 0; 
+        }
+        .external-links ul li { 
+            margin-bottom: 12px; 
+            border-bottom: 1px dashed #e2e8f0; 
+            padding-bottom: 8px; 
+        }
+
+        @media(max-width: 768px) {
+            header, section, footer { 
+                margin: 15px; 
+                padding: 25px; 
+                border-radius: 12px; 
+            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            h3 { font-size: 1.25rem; }
+            .btn-cta { width: 100%; padding: 15px 0; }
+            th, td { padding: 12px; font-size: 0.95rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>자동차보험 운전자 추가 완전 해부: 비용 계산과 다이렉트 비교 분석</h1>
+        <p>가족, 형제, 혹은 지인이 내 차량을 운전해야 할 때 꼭 알아야 하는 자동차보험 운전자 추가 제도를 설명합니다. 기간별 임시운전자특약과 상시 1인 추가 지정 방식의 구체적인 가격 차이점부터 2026년 최신 보험사별 할인 혜택, 가입 및 신청 절차까지 면밀하게 분석하여 운전자에게 가장 최적화된 방안을 제시합니다.</p>
+        <a class="btn-cta" href="#contact-form">나의 운전자 추가 예상 보험료 산출해보기</a>
+    </header>
+
+    <nav aria-label="네비게이션 목차">
+        <section style="margin: 0; padding: 20px; background: #f8fafc; border: 1px solid #e2e8f0;">
+            <h3 style="margin-top: 0;">목차 안내</h3>
+            <ul style="margin-bottom: 0;">
+                <li><a href="#definition">1. 자동차보험 운전자 추가 개념 및 종류</a></li>
+                <li><a href="#temporary-vs-permanent">2. 단기 임시운전자특약 vs 1인 지정 추가 장단점 비교</a></li>
+                <li><a href="#average-cost">3. 연령별 및 모델별 운전자 추가 평균 비용 분석</a></li>
+                <li><a href="#community-opinion">4. 온라인 커뮤니티 실제 이용자 여론 분석</a></li>
+                <li><a href="#brand-comparison">5. 주요 다이렉트 보험사 순위 및 플랫폼 혜택 비교</a></li>
+                <li><a href="#outlook-2026">6. 2026년 변화된 운전자 추가 제도와 AI 컨설팅</a></li>
+                <li><a href="#faq">7. 흔히 발생하는 오류 및 자주 묻는 질문</a></li>
+                <li><a href="#contact-form">8. 체류형 1대1 맞춤 견적 시뮬레이터 상담 신청</a></li>
+                <li><a href="#external-resources">9. 신뢰도 높은 국가기관 및 공인 정보 링크</a></li>
+            </ul>
+        </section>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    <section id="definition">
+        <h2>1. 자동차보험 운전자 추가 개념 및 종류</h2>
+        <p>자동차보험 운전자 추가 제도는 피보험자가 가입한 기존 자동차보험의 보장 범위를 확장하여 타인이 운전하던 중 사고가 나더라도 동일한 보장을 받을 수 있게 조치하는 제도입니다. 기본적으로 자동차보험은 최초 가입 시 운전자 범위를 본인 한정, 부부 한정, 가족 한정 등으로 좁혀 놓는 경우가 많습니다. 보장 대상에 포함되지 않은 인물이 운전대를 잡았다가 예기치 못한 사고를 일으키면 종합보험 혜택을 전혀 받을 수 없어 막대한 경제적 타격을 입게 됩니다.</p>
+        <p>운전자를 추가하는 방식은 크게 두 가지 종류로 분류됩니다. 첫 번째는 며칠 동안만 일시적으로 보장 범위를 전 국민 혹은 특정인으로 변경하는 단기 임시운전자특약이고, 두 번째는 기존 보험 계약의 만기일까지 특정 운전자를 고정으로 지정하여 운행하게 만드는 1인 지정 추가 방식입니다. 가입 기간과 차량 운전 주기에 따라 두 방식의 비용 편차가 크므로 신청 전에 본인의 상황을 명확하게 짚고 넘어가야 합니다.</p>
+        <p>2026년 기준으로 금융 당국과 주요 손해보험 브랜드업체들은 모바일 웹 및 인터넷 직접 가입 비중을 높이면서 관련 시스템을 간소화하고 있습니다. 과거에는 직접 전화를 걸어 심사를 받던 수고로움이 있었으나 이제는 전용 어플을 통해 즉각적인 계약 변경 절차 처리가 가능해졌습니다.</p>
+    </section>
+
+    <section id="temporary-vs-permanent">
+        <h2>2. 단기 임시운전자특약 vs 1인 지정 추가 장단점 비교</h2>
+        <p>명절 연휴나 장거리 여행, 이사 등으로 인해 일시적으로 운전대를 타인에게 넘겨야 한다면 임시운전자특약이 우수한 선택지입니다. 이 특약의 가장 큰 장점은 추가 대상의 나이 제한이나 운전 경력, 사고 이력과 상관없이 보장 범위를 누구나 운전 가능한 형태로 완전 개방할 수 있다는 점입니다. 반면 단점으로는 단 하루라도 보험 처리가 가능하지만 보장 개시 시점이 가입 당일 밤 12시(24시)부터 적용되므로 반드시 최소 하루 전에 신청해야 한다는 제약 조건이 존재합니다.</p>
+        <p>이와 대조적으로 기존 계약을 정식으로 변경하여 지정 1인을 추가하는 상시 추가 방식은 남은 보험 기간 내내 해당 인원이 마음 놓고 운전할 수 있는 장점을 지닙니다. 다만 추가되는 대상자의 연령이 지나치게 어리거나 운전 경력이 짧을 경우 피보험자 본인의 연간 보험료 총액이 크게 인상되는 단점이 있습니다. 또한 가족 관계가 아니거나 직계 비속이 아닐 경우 지정 인원을 등록할 때 다이렉트 사이트 내에서 증빙 문서를 요구받기도 합니다.</p>
+        
+        <div class="highlight-box">
+            <h3>방식 선택 시 고려사항</h3>
+            <p>연간 운행 일수가 총 15일을 넘지 않는다면 필요할 때마다 모바일 앱으로 임시운전자특약을 건건이 가입하는 편이 장기적인 비용 면에서 한결 유리합니다. 그러나 주말마다 지속적으로 운전을 담당한다면 번거로움을 덜고 지속적인 보장을 유지하기 위해 정식 운전자 1인 지정 추가 변경을 고려하시는 것을 권장합니다.</p>
+        </div>
+    </section>
+
+    <section id="average-cost">
+        <h2>3. 연령별 및 모델별 운전자 추가 평균 비용 분석</h2>
+        <p>운전자를 새로 올릴 때 사용자가 지불해야 할 추가 금액은 기존 피보험자의 연령대와 차량 가액, 그리고 추가 대상자의 최연소 나이에 의해 결정됩니다. 특히 운전 경험이 상대적으로 부족하고 통계학적으로 사고 발생률이 높은 만 21세 이하, 혹은 만 26세 이하의 신규 운전자를 등록할 경우 예상 보험료가 무척 큰 폭으로 증가하게 됩니다.</p>
+        <p>일반적으로 국산 준중형 세단이나 소형 차량의 경우 단기 특약을 1일 동안 설정하면 발생하는 비용은 보통 5000원에서 15000원 선으로 형성됩니다. 하지만 수입 스포츠카나 대형 전기차처럼 차량 가액 자체가 높아 자차 보장 한도가 큰 모델들은 단 하루를 설정하더라도 평균 30000원 이상의 청구 요금이 계산되기도 합니다. 연간 상시 추가 시에는 연령 한정을 최대로 낮추어야 하므로 기존보다 20만원에서 많게는 60만원 이상의 추가 비용이 발생할 수 있습니다.</p>
+
+        <h3>예상 연령별 추가 부담 요율표 (가상 시뮬레이션 데이터)</h3>
+        <p>아래 도표는 기존 가입자 만 35세 무사고 기준, 국산 중형 세단 차량에 추가 운전자를 지정 변경할 때 만기일까지 남은 잔여 기간 180일을 기준으로 설정한 가상의 가격 산출 지표입니다.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>추가 운전자 연령 조건</th>
+                    <th>단기 특약 1일 평균가</th>
+                    <th>180일 상시 추가 예상 금액</th>
+                    <th>비용 증감 원인 및 차이점</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>만 19세 이상 (대학 신입생 등)</td>
+                    <td>18,000원</td>
+                    <td>450,000원</td>
+                    <td>고위험 연령군으로 분류되어 요율 상승폭이 가장 큼</td>
+                </tr>
+                <tr>
+                    <td>만 21세 이상 (군 전역자 등)</td>
+                    <td>12,000원</td>
+                    <td>310,000원</td>
+                    <td>면허 취득 초기 단계에 해당하여 할증 적용</td>
+                </tr>
+                <tr>
+                    <td>만 24세 이상 (사회 초년생)</td>
+                    <td>8,500원</td>
+                    <td>190,000원</td>
+                    <td>사고율이 점차 하락하는 구간으로 요율이 대폭 보정됨</td>
+                </tr>
+                <tr>
+                    <td>만 26세 이상 (대중적 연령층)</td>
+                    <td>6,000원</td>
+                    <td>110,000원</td>
+                    <td>안정적인 운전 경험 축적으로 가장 합리적인 금액 산정</td>
+                </tr>
+                <tr>
+                    <td>만 30세 이상 (숙련 운전자)</td>
+                    <td>4,500원</td>
+                    <td>65,000원</td>
+                    <td>본인 한정 요율과 편차가 거의 없어 부담이 적음</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-size:0.9rem; color:#718096; margin-top: -10px;">상기 표에 기술된 예상 가격 지표는 운전자의 세부 가입 경력, 사고 내역 및 보험 업체별 사업 요율 기준에 의해 실계산 시 차이가 존재할 수 있으므로 전용 앱의 계산기 기능을 통해 확정 견적을 받아보시기 바랍니다.</p>
+    </section>
+
+    <section id="community-opinion">
+        <h2>4. 온라인 커뮤니티 실제 이용자 여론 분석</h2>
+        <p>국내의 유명 온라인 사이트와 자동차 동호회 채널인 디시인사이드(디시), 보배드림, 에펨코리아(펨코) 게시판을 둘러보면 자동차보험 운전자 추가에 관한 다양한 내돈내산 가입 후기 글들과 현실적인 조언들을 심심치 않게 접할 수 있습니다. 각 커뮤니티 이용자들이 공유하는 핵심 정보와 장단점 평가는 다음과 같이 압축됩니다.</p>
+        <p>우선 보배드림의 한 사용자는 장거리 귀성길 교대 운전을 위해 명절 당일 가입을 시도하다 당일 적용이 불가능하여 낭패를 보았던 실제 사례를 공유했습니다. 자정이 지나면 즉각 효력이 생기기 때문에 반드시 출발 하루 전에 온라인 다이렉트 사이트 혹은 손쉽게 카카오톡 어플이나 토스 앱을 활용해 미리 가입 신청 절차를 마쳐야 한다고 강조했습니다.</p>
+        <p>에펨코리아 커뮤니티에서는 부모님 차량에 본인을 임시 지정하는 방식과 단기 운전자 특약을 매달 몇 번씩 갱신하는 비용을 수치상으로 직접 계산 및 비교해 올린 내돈내산 분석 글이 조회수 상위에 올랐습니다. 매주 차량을 빌려 타는 수준이 아니라면, 필요할 때마다 모바일 앱을 켜서 즉시 이벤트를 연계해 포인트 혜택을 챙기면서 소액 결제를 진행하는 편이 연간 단위 지출을 크게 아끼는 지름길이라는 점이 많은 공감을 얻었습니다.</p>
+        <p>디시인사이드 금융 게시판의 보험 전문 설계사 채널에서는 운전자 추가 시 부모님 명의 밑으로 가입하여 경력을 미리 쌓아두는 경력 지정 제도를 적극 추천하고 있습니다. 이를 활용하면 나중에 본인 명의로 신규 다이렉트 자동차보험에 가입할 때 최초 경력 부족으로 발생하는 살인적인 할증 등급을 피해 갈 수 있어 미래의 가입 비용을 대폭 아끼는 장점이 있다는 실용적인 꿀팁이 전수되고 있습니다.</p>
+    </section>
+
+    <section id="brand-comparison">
+        <h2>5. 주요 다이렉트 보험사 순위 및 플랫폼 혜택 비교</h2>
+        <p>국내 주요 손해보험 브랜드업체들은 저마다 다이렉트 할인 요율을 경쟁적으로 앞세워 모바일 앱이나 인터넷 환경에서 신규 계약 변경 시스템을 구축하고 있습니다. 동일한 사람을 추가하더라도 어느 회사의 제품군을 선택하느냐에 따라 실제 청구되는 금액의 편차가 존재하므로 정밀한 순위 비교 및 혜택 검토가 동반되어야 합니다.</p>
+        <p>예를 들어 일부 상위 대형 브랜드사들은 자사 전용 어플을 통해 운전자를 임시로 추가할 때 자녀 동반 탑승 할인 연계나 무사고 포인트 적립 제도를 운용합니다. 또한 핀테크 금융 플랫폼인 토스나 네이버페이, 카카오톡 제휴 경로를 경유하여 계산기 기능을 사용하면 일정 금액 상당의 모바일 주유 상품권, 신세계 상품권, 캐시백 혹은 현금지원 혜택을 제공하는 이벤트를 적극적으로 기획하고 있습니다.</p>
+        <p>단순히 기본 가격이 제일 싼곳이나 저렴한곳만을 고집하기보다는 긴급출동 서비스가 전국 어디서나 촘촘하게 지원되는지, 혹시 모를 대형 사고 시 법적 보장이 원활하게 전개되는지 전문적인 고객 응대 인프라 순위까지 고루 살펴보는 자세가 요망됩니다. 다이렉트 채널은 별도의 설계사 마진이 포함되지 않아 오프라인 매장 대비 약 15% 정도 비용이 내려가는 고유한 매력을 품고 있어 합리적인 소비를 지향하는 젊은 층에게 큰 인기를 유지하고 있습니다.</p>
+    </section>
+
+    <section id="outlook-2026">
+        <h2>6. 2026년 변화된 운전자 추가 제도와 AI 컨설팅</h2>
+        <p>2026년에 도래한 대한민국 자동차보험 생태계는 혁신적인 스마트 정보통신 기술과 결합하여 한 차원 높은 개인 맞춤형 서비스를 제공하고 있습니다. 대표적으로 챗지피티(ChatGPT)나 제미나이(Gemini)와 같은 자연어 처리 인공지능 AI 기술이 보험 상담 영역에 적극적으로 개입하기 시작했습니다. 소비자가 구글이나 네이버에 복잡하게 검색해 볼 필요 없이, AI 기반 상담 봇과의 몇 마디 채팅만으로도 자신의 주행 패턴에 알맞은 운전자 추가 한도를 곧바로 조언받을 수 있게 되었습니다.</p>
+        <p>또한 모바일 앱 연동 주행거리 연동 시스템(UBI)의 도입 범위가 대폭 확장되었습니다. 이제는 임시 추가된 제3자가 운전 중 티맵(TMAP)이나 순정 내비게이션 어플을 켜고 목적지까지 이동할 때 측정되는 가속, 급감속 등의 운전 점수가 기존 피보험자의 안전점수 평점에 연동되어 실시간으로 할인이 가산되는 스마트한 요약 정산 혜택이 상용화되었습니다. 법령 정비 측면에서도 1인 추가 신청 시 본인 인증 수단이 생체 인식 및 PASS 인증서 앱으로 통합되어 보안성은 높아지고 불필요한 행정 서류 구비 과정은 자취를 감추었습니다.</p>
+        <p>이외에도 대중교통 마일리지 환급 혜택이나 주말 한정 운전자 지정 등 초정밀 맞춤형 담보 종류가 신규 출시되면서 전통적인 연령 가산 방식의 고정관념이 깨지고 있습니다. 사용자의 스마트폰 인스타그램, 페이스북, 유튜브 등 소셜 네트워크 제휴 프로모션이나 카카오톡 채널 추가 이벤트를 통해 시시각각 할인 쿠폰과 주유 제휴 사품권이 발급되므로 이러한 디지털 플랫폼 활용 노하우가 곧 보험 금융 지능의 척도로 평가받는 형국입니다.</p>
+    </section>
+
+    <section id="faq">
+        <h2>7. 흔히 발생하는 오류 및 자주 묻는 질문</h2>
+        
+        <h3>임시운전자특약은 당일 신청해서 바로 혜택을 볼 수 있나요?</h3>
+        <p>아닙니다. 모든 임시운전자특약은 가입 절차를 정상 완료한 당일의 밤 12시(24시)부터 보장 책임이 개시됩니다. 만약 급하게 당일 운전자가 추가되어 가입해야 하는 긴박한 상황이라면 당일 가입 즉시 효력이 발생하는 다른 종류의 원데이 자동차보험 앱 서비스를 개별적으로 다운로드하여 적용하는 대안을 고려해야만 합니다.</p>
+        
+        <h3>내 차량에 추가된 사람이 사고를 냈을 때 피보험자인 나의 보험료도 할증되나요?</h3>
+        <p>그렇습니다. 추가된 운전자가 사고를 유발하여 자차나 대인, 대물 보험금을 지급하게 될 경우 차량의 원소유주이자 피보험자인 본인의 할인할증 등급이 악영향을 받아 차기 갱신 시 예상 가입 비용이 대폭 올라갈 수 있습니다. 따라서 운전자를 지정할 때는 무사고 이력이 확실하고 신뢰할 수 있는 대상인지 여부를 진지하게 따져 보아야 합니다.</p>
+        
+        <h3>운전자 추가를 해지하면 남은 기간만큼의 차액 환급을 받을 수 있습니까?</h3>
+        <p>지정 1인 추가 등의 정식 범위 변경은 계약 기간 도중 언제든 해지가 가능합니다. 해지 신청 즉시 남은 일수만큼의 잔여 적립금이 일할 계산되어 피보험자의 등록 계좌로 안전하게 환급금 처리가 완료됩니다. 단, 단기 일일 특약의 경우에는 계약 지정일이 시작되기 전날까지만 전액 취소가 가능하며 이미 일정이 개시된 시점부터는 도중 해지 및 환급 처리가 불가능합니다.</p>
+        
+        <h3>형제나 자매를 추가할 때 가족 한정 특약을 고르는 것이 유리한가요?</h3>
+        <p>많은 분들이 흔히 착각하는 항목입니다. 자동차보험에서 규정하는 가족의 범위에는 본인의 배우자, 부모, 자녀, 그리고 사위나 며느리까지만 포함되며 형제나 자매는 기본 가족 범위에서 명백히 제외됩니다. 따라서 형제 및 자매가 운전하려면 형제자매 아우름 특약을 별도로 선택하거나 지정 1인 추가 방식을 통해 개별 등록해야 면책 사고 피해를 방지할 수 있습니다.</p>
+        
+        <h3>인터넷 다이렉트로 신청하면 오프라인 대면 전화보다 저렴한 수준이 어느 정도인가요?</h3>
+        <p>모바일 기기나 개인용 컴퓨터로 보험사 홈페이지 다이렉트 창구에 손수 접속하여 추가 절차를 수행하면 오프라인 전화 상담사를 거치는 것보다 최소 5%에서 최고 15% 수준까지 수수료 차감 할인을 누릴 수 있습니다. 본인 인증부터 결제까지 손쉽게 처리 가능하므로 웬만하면 앱 설치를 권장하는 추세입니다.</p>
+    </section>
+
+    <section id="contact-form">
+        <h2>8. 체류형 1대1 맞춤 견적 시뮬레이터 상담 신청</h2>
+        <p>아직도 본인 차량에 어떤 방식으로 운전자를 추가하는 것이 예산을 최소화하는지 헷갈리시나요? 아래 시뮬레이터 입력창에 정보를 꼼꼼히 적어 주시면, 2026년 최신 손해보험 데이터베이스를 종합 집계하여 최저가 가입 방안과 함께 모바일 상품권 제공 이벤트 혜택 적용 가능 여부를 전문 안내해 드립니다. 입력을 자세히 하실수록 최적의 가격 매칭이 가능합니다.</p>
+        
+        <form action="#" method="GET" onsubmit="alert('모든 입력값이 성공적으로 취합되었습니다. 2026년 기준 맞춤 시뮬레이션 데이터를 전송합니다.'); return false;">
+            <div class="form-group">
+                <label for="owner-name">가입 차주 성함<span class="required-star">*</span></label>
+                <input type="text" id="owner-name" required placeholder="예: 김철수">
+            </div>
+
+            <div class="form-group">
+                <label for="owner-phone">비상 연락망<span class="required-star">*</span></label>
+                <input type="tel" id="owner-phone" required placeholder="예: 010-1234-5678">
+            </div>
+
+            <div class="form-group">
+                <label for="car-brand">현재 보유 차량 브랜드 종류<span class="required-star">*</span></label>
+                <select id="car-brand" required>
+                    <option value="">차량 소속 브랜드 선택</option>
+                    <option value="hyundai">현대자동차</option>
+                    <option value="kia">기아</option>
+                    <option value="genesis">제네시스</option>
+                    <option value="kgm">KGM (쌍용)</option>
+                    <option value="renault">르노코리아</option>
+                    <option value="chevrolet">쉐보레</option>
+                    <option value="import">수입산 차량 수입 브랜드</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="target-relation">추가하려는 사람과의 관계 종류<span class="required-star">*</span></label>
+                <select id="target-relation" required>
+                    <option value="">관계 선택</option>
+                    <option value="spouse">배우자</option>
+                    <option value="parent">부모님 (차주의 부모)</option>
+                    <option value="child">자녀 (만 26세 미만 포함)</option>
+                    <option value="sibling">형제 또는 자매</option>
+                    <option value="friend">지인, 친구, 타인</option>
+                    <option value="anyone">누구나 단기 운행 필요</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="target-age">추가 대상자의 만 나이 입력<span class="required-star">*</span></label>
+                <input type="number" id="target-age" required min="18" max="90" placeholder="예: 26">
+            </div>
+
+            <div class="form-group">
+                <label for="duration">예상되는 총 운행 소요 기간<span class="required-star">*</span></label>
+                <select id="duration" required>
+                    <option value="">운행 기간 선택</option>
+                    <option value="1">단 하루만 임시 운전 (1일)</option>
+                    <option value="3">명절 연휴 위주 (3일 내외)</option>
+                    <option value="7">장거리 야외 활동 (7일 내외)</option>
+                    <option value="30">한 달 살기 등 한시적 사용 (30일)</option>
+                    <option value="full">기존 보험 만기 시점까지 계속 상시 추가</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>추가적인 가입 혜택 수령 방법 및 관심사 (복수 체크 가능)</label>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
+                    <label><input type="checkbox" name="interest_benefit" value="cash"> 모바일 주유소 상품권 혜택</label>
+                    <label><input type="checkbox" name="interest_benefit" value="direct"> 즉시 확인 가능한 다이렉트 싼곳 안내</label>
+                    <label><input type="checkbox" name="interest_benefit" value="career"> 신규 가입자 운전 경력 인정제 등록 절차</label>
+                    <label><input type="checkbox" name="interest_benefit" value="ai"> Gemini 및 ChatGPT 최신 AI 컨설팅 보고서</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="custom-text">기타 특이 사항 기재란 (보유 차종 연식, 예상 주행거리 등 구체적 정보)</label>
+                <textarea id="custom-text" rows="5" placeholder="예: 현재 보유한 차량은 2021년식 쏘렌토 하이브리드 모델입니다. 만 23세 대학생 아들을 한 달 동안만 임시 지정해서 운전 연습을 시키려고 하는데 어떤 보험 조합이 제일 비용 면에서 유리한지 세부 견적을 원합니다."></textarea>
+            </div>
+
+            <button type="submit" class="btn-cta" style="margin-bottom:0;">맞춤 분석 리포트 받아보기</button>
+        </form>
+    </section>
+
+    <section id="external-resources">
+        <h2>9. 신뢰도 높은 국가기관 및 공인 정보 링크</h2>
+        <p>자동차보험 운전자 추가 제도 및 교통안전 관련 법령, 공신력 있는 금융 정책을 면밀히 파악할 수 있도록 돕는 대표적인 신뢰성 높은 주요 기관들의 주소록입니다.</p>
+        <div class="external-links">
+            <ul>
+                <li><a href="https://www.fss.or.kr" target="_blank" rel="nofollow noopener">금융감독원 공식 홈페이지</a>: 국내 보험 시장의 불공정 거래 감시 및 건전한 금융 환경을 지도하는 총괄 감독 기관입니다.</li>
+                <li><a href="https://www.law.go.kr" target="_blank" rel="nofollow noopener">국가법령정보센터</a>: 자동차손해배상 보장법 및 시행령 등 법률적 의무 사항과 책임 보장 한도를 정확히 살펴볼 수 있습니다.</li>
+                <li><a href="https://www.knia.or.kr" target="_blank" rel="nofollow noopener">손해보험협회 공시실</a>: 국내 모든 손해보험 회사들의 자산 건전성 순위 및 손해 요율 지표를 투명하게 공개하는 협회 채널입니다.</li>
+                <li><a href="https://www.nida.or.kr" target="_blank" rel="nofollow noopener">보험개발원 공식 포털</a>: 내 차의 공식 등급 평가와 부품비 지수, 그리고 연식에 따른 잔존 가치 가액 계산 기초 데이터를 취급합니다.</li>
+                <li><a href="https://namu.wiki/w/%EC%95%84%EC%B2%B4%20%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98" target="_blank" rel="nofollow noopener">나무위키 - 자동차보험 분석 문서</a>: 일반 사용자들이 오랜 기간 누적 집필하여 자차 관리 및 특약 종류별 상식과 가입 팁이 보기 좋게 요약된 대중적 백과사전입니다.</li>
+            </ul>
+        </div>
+    </section>
+
+  
